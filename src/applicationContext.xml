@@ -23,11 +23,17 @@
 	
     <!-- Define your beans here -->
     
-    
+    <!-- beans defined with constructor -->
     <bean id="myCoach" class="com.luv2code.springdemo.BaseballCoach"><constructor-arg ref="myFortune"/></bean>
     <bean id="skateCoach" class="com.luv2code.springdemo.SkatingCoach"><constructor-arg ref="myFortune"/></bean>
     
-    
+    <!-- beans defined with setter method -->
+    <bean id="trackCoach" class="com.luv2code.springdemo.TrackCoach">
+    	<!-- set up setter injection -->
+    	<!-- spring automatically adds set in front of name parameter and it matches with the setter.
+    	therefore, fortuneService will turn to setFortuneService -->
+    	<property name="fortuneService" ref="myFortune" />
+    </bean>
 </beans>
 
 

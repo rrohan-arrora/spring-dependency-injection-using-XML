@@ -5,7 +5,7 @@ public class HappyFortuneService implements FortuneService {
 	@Override
 	public String getFortune() {
 		// TODO Auto-generated method stub
-		return "SOON, I WILL CONSTRUCT PLACEMENT PORTAL FOR IIIT BANGALORE";
+		return "SOON, I WILL CONSTRUCT PLACEMENT PORTAL FOR IIIT BANGALORE and I AM HAPPY";
 	}
 
 }
