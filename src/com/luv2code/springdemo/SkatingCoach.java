@@ -1,11 +1,11 @@
 package com.luv2code.springdemo;
 
-public class TrackCoach implements Coach {
+public class SkatingCoach implements Coach {
 
 	@Override
 	public String getDailyWorkout() {
 		// TODO Auto-generated method stub
-		return "spend 10 minutes";
+		return "Practice for 15 mins";
 	}
 
 	@Override
@@ -13,5 +13,5 @@ public class TrackCoach implements Coach {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+	
 }
