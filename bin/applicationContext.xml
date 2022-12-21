@@ -20,6 +20,8 @@
     <!-- Define your  dependency beans here -->
     <bean id="myFortune" class="com.luv2code.springdemo.HappyFortuneService"></bean>
     
+    <!-- load the properties file here -->
+    <context:property-placeholder location="classpath:sport.properties"/>
 	
     <!-- Define your beans here -->
     
@@ -33,8 +35,8 @@
     	<!-- spring automatically adds set in front of name parameter and it matches with the setter.
     	therefore, fortuneService will turn to setFortuneService -->
     	<property name="fortuneService" ref="myFortune" />
-    	<property name="email" value="rohan.arora@iiitb.ac.in"/>
-    	<property name="teamCount" value="10"/>
+    	<property name="email" value="${rohan.email}"/>
+    	<property name="teamCount" value="${rohan.team}"/>
     </bean>
 </beans>
 
