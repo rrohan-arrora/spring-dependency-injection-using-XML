@@ -26,4 +26,13 @@ public class SkatingCoach implements Coach {
 		return fortuneService.getFortune();
 	}
 	
+	// add an init method to be used during bean life cycle
+	public void doMyStartupStuff() {
+		System.out.println("Init method during bean initialization");
+	}
+	
+	// add a destroy method to be used at bean closure of destruction
+	public void doMyEndStuff() {
+		System.out.println("Destroy method at bean closure");
+	}
 }

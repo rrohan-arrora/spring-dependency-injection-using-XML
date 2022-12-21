@@ -10,7 +10,13 @@
     <!-- Define your  dependency beans here -->
     <bean id="fortuneService" class="com.luv2code.springdemo.HappyFortuneService"></bean>
     
-    <bean id="skatingCoach" class="com.luv2code.springdemo.SkatingCoach"><constructor-arg ref="fortuneService" /></bean>
+    <bean id="skatingCoach" 
+    	class="com.luv2code.springdemo.SkatingCoach"
+    	init-method="doMyStartupStuff"
+    	destroy-method="doMyEndStuff">
+    	
+    	<constructor-arg ref="fortuneService" />
+    </bean>
     
 </beans>
 
